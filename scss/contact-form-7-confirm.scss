@@ -1,0 +1,46 @@
+.wpcf7 {
+    .wpcf7-spinner,
+    .wpcf7-response-output,
+    .no-show {
+        display: none !important;
+    }
+    input:-webkit-autofill {    //自動入力で背景色が変わるのを防ぐ
+        box-shadow: 0 0 0 1000px #fff inset;
+    }
+    button {
+        display: block;
+    }
+    .wpcf7-form-control-wrap {
+        &.your-zip {
+            padding-left: 1.5em;
+            input {
+                width: 33%;
+            }
+            &::before {
+                content: "〒";
+                display: inline;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .wpcf7-not-valid-tip {  //エラーメッセージ
+
+    }
+}
+//入力画面でのスタイル
+[data-form-step=input]{
+    #btn_back_input { display: none; }
+}//[data-form-step=input]{
+
+//確認画面でのスタイル
+[data-form-step=confirm]{
+    input,textarea,select {
+        pointer-events: none;
+    }
+    textarea {
+        resize: none;
+    }
+
+}//[data-form-step=confirm]

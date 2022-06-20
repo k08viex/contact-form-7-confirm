@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.wpcf7 .wpcf7-spinner,
+.wpcf7 .wpcf7-response-output,
+.wpcf7 .no-show {
+  display: none !important;
+}
+
+.wpcf7 input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+          box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.wpcf7 button {
+  display: block;
+}
+
+.wpcf7 .wpcf7-form-control-wrap.your-zip {
+  padding-left: 1.5em;
+}
+
+.wpcf7 .wpcf7-form-control-wrap.your-zip input {
+  width: 33%;
+}
+
+.wpcf7 .wpcf7-form-control-wrap.your-zip::before {
+  content: "〒";
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+[data-form-step=input] #btn_back_input {
+  display: none;
+}
+
+[data-form-step=confirm] input, [data-form-step=confirm] textarea, [data-form-step=confirm] select {
+  pointer-events: none;
+}
+
+[data-form-step=confirm] textarea {
+  resize: none;
+}
+/*# sourceMappingURL=contact-form-7-confirm.css.map */
